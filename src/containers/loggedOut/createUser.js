@@ -23,8 +23,10 @@ class LoginScreen extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      user: '',
+      firstName: '',
+      lastName: '',
       password: '',
+      repeatPassword: '',
     }
   }
   handleInput = (what, value) => {
@@ -36,32 +38,36 @@ class LoginScreen extends React.Component {
   }
 
   render() {
-    const { user } = this.state;
+    const { firstName, lastName, password, repeatPassword } = this.state;
     return (
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: BgColor}}>
-        <Text style={{ color: White, width: '60%', textAlign: 'left' }}>User</Text>
+        <Text style={{ color: White, width: '60%', textAlign: 'left' }}>First Name</Text>
         <TextInput
           style={styles.input}
-          onChange={(e)=> this.handleInput('user', e.target.value)}
-          value={user}
+          onChange={(e)=> this.handleInput('firstName', e.target.value)}
+          value={firstName}
+        />
+        <Text style={{ color: White, width: '60%', textAlign: 'left' }}>Last Name</Text>
+        <TextInput
+          style={[styles.input, { marginBottom: 20 }]}
+          onChange={(e)=> this.handleInput('password', e.target.value)}
+          value={lastName}
         />
         <Text style={{ color: White, width: '60%', textAlign: 'left' }}>Password</Text>
         <TextInput
           style={[styles.input, { marginBottom: 20 }]}
           onChange={(e)=> this.handleInput('password', e.target.value)}
-          value={user}
+          value={password}
+        />
+        <Text style={{ color: White, width: '60%', textAlign: 'left' }}>Repeat Password</Text>
+        <TextInput
+          style={[styles.input, { marginBottom: 20 }]}
+          onChange={(e)=> this.handleInput('password', e.target.value)}
+          value={repeatPassword}
         />
         <Button
-          label={'Login'}
+          label={'Create User'}
           onPress={()=> this.handleLogin()}
-          labelColor={White}
-          bgColor={BtColor}
-          btWidth={'60%'}
-        />
-
-        <Button
-          label={'Create new user'}
-          onPress={()=> this.props.navigation.navigate('CreateUser')}
           labelColor={White}
           bgColor={BtColor}
           btWidth={'60%'}
