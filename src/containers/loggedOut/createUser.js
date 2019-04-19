@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, TextInput, StyleSheet } from 'react-native';
+import { View, Text, TextInput, StyleSheet, Alert } from 'react-native';
 import Button from '../../components/buttons/button.js';
 const BgColor = '#0f3073';
 const BtColor = '#5a86df';
@@ -34,7 +34,25 @@ class LoginScreen extends React.Component {
   }
 
   handleLogin = () => {
-    console.log('Start login! Awesome');
+    const { password, repeatPassword, firstName, lastName } = this.state;
+
+    if(password !== repeatPassword ) {
+      Alert.alert(
+      'Incorrect password',
+      'Your password dosent match',
+      [
+        // {text: 'Ask me later', onPress: () => console.log('Ask me later pressed')},
+        // {
+        //   text: 'Cancel',
+        //   onPress: () => console.log('Cancel Pressed'),
+        //   style: 'cancel',
+        // },
+        {text: 'OK', onPress: () => console.log('OK Pressed')},
+      ],
+      {cancelable: false},
+    );
+    }
+    console.log('Start login! Awesome', firstName, lastName, password, repeatPassword);
   }
 
   render() {
@@ -50,7 +68,7 @@ class LoginScreen extends React.Component {
         <Text style={{ color: White, width: '60%', textAlign: 'left' }}>Last Name</Text>
         <TextInput
           style={[styles.input, { marginBottom: 20 }]}
-          onChange={(e)=> this.handleInput('password', e.target.value)}
+          onChange={(e)=> this.handleInput('lastName', e.target.value)}
           value={lastName}
         />
         <Text style={{ color: White, width: '60%', textAlign: 'left' }}>Password</Text>
@@ -62,7 +80,7 @@ class LoginScreen extends React.Component {
         <Text style={{ color: White, width: '60%', textAlign: 'left' }}>Repeat Password</Text>
         <TextInput
           style={[styles.input, { marginBottom: 20 }]}
-          onChange={(e)=> this.handleInput('password', e.target.value)}
+          onChange={(e)=> this.handleInput('repeatPassword', e.target.value)}
           value={repeatPassword}
         />
         <Button
