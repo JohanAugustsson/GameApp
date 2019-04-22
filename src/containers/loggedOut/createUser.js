@@ -1,9 +1,11 @@
 import React from 'react';
+import Firebase from 'react-native-firebase';
 import { View, Text, TextInput, StyleSheet, Alert } from 'react-native';
 import Button from '../../components/buttons/button.js';
 const BgColor = '#0f3073';
 const BtColor = '#5a86df';
 const White = '#efeff1';
+
 
 const styles = StyleSheet.create({
   input: {
@@ -53,6 +55,17 @@ class LoginScreen extends React.Component {
     );
     }
     console.log('Start login! Awesome', firstName, lastName, password, repeatPassword);
+    this.handleCreateUser();
+  }
+
+  handleCreateUser = () => {
+    const email = 'zingo80@msn.com';
+    const password = 'testare';
+    Firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      console.log(errorCode, errorMessage);
+    });
   }
 
   render() {
