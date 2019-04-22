@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "860892947793",
+    "firebase_url": "https://gameapp-jp.firebaseio.com",
+    "project_id": "gameapp-jp",
+    "storage_bucket": "gameapp-jp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:860892947793:android:8f3bf672159ce7e2",
+        "android_client_info": {
+          "package_name": "com.gameapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "860892947793-aag8vdvvjrdj6j6nq7ek0faiq4j9ffpe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBlFs7BgMK-OOpXveZ_2Kn-EpSqs8DvZxQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "860892947793-aag8vdvvjrdj6j6nq7ek0faiq4j9ffpe.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "860892947793-r3jts93anp24mva8ac5bi1ghc77fk7mi.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "org.reactjs.native.example.GameApp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

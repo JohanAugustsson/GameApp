@@ -9,6 +9,9 @@ import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
 import com.facebook.soloader.SoLoader;
+import io.invertase.firebase.auth.RNFirebaseAuthPackage;
+import io.invertase.firebase.database.RNFirebaseDatabasePackage;
+import io.invertase.firebase.firestore.RNFirebaseFirestorePackage;
 
 import java.util.Arrays;
 import java.util.List;
@@ -25,8 +28,11 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
-            new RNFirebasePackage(),
-          new RNGestureHandlerPackage()
+          new RNFirebasePackage(),
+          new RNGestureHandlerPackage(),
+          new RNFirebaseAuthPackage(),
+          new RNFirebaseDatabasePackage(),
+          new RNFirebaseFirestorePackage()
 
       );
     }

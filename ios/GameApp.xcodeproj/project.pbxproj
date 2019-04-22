@@ -37,6 +37,7 @@
 		2DCD954D1E0B4F2C00145EB5 /* GameAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* GameAppTests.m */; };
 		2DF0FFEE2056DD460020B375 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3EA31DF850E9000B6D8A /* libReact.a */; };
 		4B482CE88316FE40DD8EFED2 /* libPods-GameApp-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 335948F4589E832A07D0343A /* libPods-GameApp-tvOS.a */; };
+		5C886FC2226DC2CE00CEDDDC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5C886F99226DC2CE00CEDDDC /* GoogleService-Info.plist */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
 		B2B65FFFAA7F0D00A3026B04 /* libPods-GameAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0324F59702361C595F693C57 /* libPods-GameAppTests.a */; };
@@ -375,6 +376,7 @@
 		335948F4589E832A07D0343A /* libPods-GameApp-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GameApp-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37D5C0AC6F66404BAE52C12E /* libRNFirebase.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNFirebase.a; sourceTree = "<group>"; };
 		49C9C54CB15242178E9A5217 /* RNGestureHandler.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNGestureHandler.xcodeproj; path = "../node_modules/react-native-gesture-handler/ios/RNGestureHandler.xcodeproj"; sourceTree = "<group>"; };
+		5C886F99226DC2CE00CEDDDC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "GameApp/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		6ABF912BBD0340F755C8074E /* Pods-GameApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameApp.release.xcconfig"; path = "Target Support Files/Pods-GameApp/Pods-GameApp.release.xcconfig"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
@@ -680,6 +682,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				5C886F99226DC2CE00CEDDDC /* GoogleService-Info.plist */,
 				13B07FAE1A68108700A75B9A /* GameApp */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* GameAppTests */,
@@ -1196,6 +1199,7 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				5C886FC2226DC2CE00CEDDDC /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
