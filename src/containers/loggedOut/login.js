@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import { View, Text, TextInput, StyleSheet } from 'react-native';
 import Button from '../../components/buttons/button.js';
 const BgColor = '#0f3073';
@@ -33,10 +34,13 @@ class LoginScreen extends React.Component {
 
   handleLogin = () => {
     console.log('Start login! Awesome');
+   this.props.dispatch({ type: 'MY_ACTION' })
   }
 
   render() {
     const { user } = this.state;
+    console.log(12, this.props.userInStore);
+    console.log(this.props);
     return (
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: BgColor}}>
         <Text style={{ color: White, width: '60%', textAlign: 'left' }}>User</Text>
@@ -71,4 +75,6 @@ class LoginScreen extends React.Component {
   }
 }
 
-export default (LoginScreen);
+const mapStateToProps = state => ({ userInStore: state.user })
+
+export default connect(mapStateToProps)(LoginScreen);
