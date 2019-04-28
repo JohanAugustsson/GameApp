@@ -33,8 +33,7 @@ class LoginScreen extends React.Component {
   }
 
   handleLogin = () => {
-    console.log('Start login! Awesome');
-   this.props.dispatch({ type: 'MY_ACTION' })
+   this.props.navigation.navigate('Home')
   }
 
   render() {
@@ -46,13 +45,13 @@ class LoginScreen extends React.Component {
         <Text style={{ color: White, width: '60%', textAlign: 'left' }}>User</Text>
         <TextInput
           style={styles.input}
-          onChange={(e)=> this.handleInput('user', e.target.value)}
+          onChangeText={(e)=> this.handleInput('user', e)}
           value={user}
         />
         <Text style={{ color: White, width: '60%', textAlign: 'left' }}>Password</Text>
         <TextInput
           style={[styles.input, { marginBottom: 20 }]}
-          onChange={(e)=> this.handleInput('password', e.target.value)}
+          onChangeText={(e)=> this.handleInput('password', e)}
           value={user}
         />
         <Button

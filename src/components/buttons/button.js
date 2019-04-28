@@ -28,6 +28,8 @@ class Button extends PureComponent {
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
+    maxHeight: 50,
     margin: 10,
     paddingLeft: 5,
     paddingRight: 5,
